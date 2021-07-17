@@ -1,0 +1,7 @@
+.authSwitchBtn {
+    background-color: transparent;
+    border: 0;
+    margin-top: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -1,0 +1,16 @@
+.topHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topHeader ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.topHeader ul li {
+    display: inline-block;
+    padding: 4px 6px;
+}
