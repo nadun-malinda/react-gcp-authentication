@@ -1,7 +1,10 @@
+import ProfileForm from './ProfileForm'
+
 const Profile = () => {
     return (
         <section>
-            User Profile
+            <h2>User Profile</h2>
+            <ProfileForm />
         </section>
     )
 }

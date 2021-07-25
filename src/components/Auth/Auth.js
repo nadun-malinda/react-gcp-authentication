@@ -1,4 +1,5 @@
 import { useState, useRef, useContext } from 'react'
+import { useHistory } from 'react-router-dom'
 import axios from '../../axios'
 import AuthContext from '../../store/auth-context'
 import classes from './Auth.module.css'
@@ -6,6 +7,7 @@ import classes from './Auth.module.css'
 const Auth = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [isLoginForm, setIsLoginForm] = useState(false)
+    const history = useHistory()
     const authCtx = useContext(AuthContext)
     const emailInputRef = useRef()
     const passwordInputRef = useRef()
@@ -25,6 +27,7 @@ const Auth = () => {
             console.log('res: ', res)
             authCtx.login(res.data.idToken)
             setIsLoading(false)
+            history.replace('/')
         }).catch(err => {
             console.log('err: ', err)
             let errMessage = 'Authentication Failed!'
